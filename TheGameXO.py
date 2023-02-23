@@ -58,8 +58,9 @@ greed()
 current_player = 'X'
 show_board(board)
 
-print(f'Ходит игрок {current_player}')
+
 for count in range(9):
+    print(f'Ходит игрок {current_player}')
     x, y = get_move()
     board[x][y] = current_player
     show_board(board)
@@ -73,4 +74,7 @@ for count in range(9):
         current_player = 'O'
     else:
         current_player = 'X'
+else:
+    print('Ничья!')
+    
 
